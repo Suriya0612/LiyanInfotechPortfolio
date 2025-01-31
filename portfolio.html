@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liyan Infotech Portfolio</title>
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Liyan Infotech</h1>
+        <p>Your Trusted Computer Store in 9th Main Rd, opposite Chamundeswari hotel, Pappya Reddy Layout, Honga sandra, Garvebhavi Palya, Bengaluru, Karnataka 560068</p>
+    </header>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#laptops">Laptops</a>
+        <a href="#order">Order Now</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Liyan Infotech, founded by Murali Mallaiyan, is a trusted computer store located in Bengaluru, Karnataka. We specialize in selling secondhand, high-quality laptops, mice, keyboards, and other IT accessories. Our expert repair services ensure your devices stay in top condition. We deliver products and services across India with a commitment to quality and customer satisfaction.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <div class="service-item">
+                <h3>Sales of Secondhand IT Assets</h3>
+                <p>Explore our range of refurbished laptops, peripherals, and accessories, all tested and certified for quality.</p>
+            </div>
+            <div class="service-item">
+                <h3>Repair Services</h3>
+                <p>From laptops to peripherals, our skilled technicians offer comprehensive diagnostics and repair services.</p>
+            </div>
+            <div class="service-item">
+                <h3>Nationwide Delivery</h3>
+                <p>We ensure safe and reliable delivery of your products anywhere in India with easy return policies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="laptops" class="laptops-section">
+        <h2>Our Laptop Collection</h2>
+        <div class="laptops-grid">
+            <div class="laptop-card">
+                <img src="images/dell-laptop.jpg" alt="Dell Laptop">
+                <h3>Dell Inspiron</h3>
+                <p>15.6" FHD, Intel i5, 8GB RAM, 512GB SSD</p>
+                <button onclick="selectLaptop('Dell Inspiron', '15.6 FHD, Intel i5, 8GB RAM, 512GB SSD')">Select</button>
+            </div>
+
+            <div class="laptop-card">
+                <img src="images/hp-laptop.jpg" alt="HP Laptop">
+                <h3>HP Pavilion</h3>
+                <p>14" FHD, AMD Ryzen 5, 16GB RAM, 1TB SSD</p>
+                <button onclick="selectLaptop('HP Pavilion', '14 FHD, AMD Ryzen 5, 16GB RAM, 1TB SSD')">Select</button>
+            </div>
+
+            <div class="laptop-card">
+                <img src="images/lenovo-laptop.jpg" alt="Lenovo Laptop">
+                <h3>Lenovo ThinkPad</h3>
+                <p>15.6" FHD, Intel i7, 16GB RAM, 512GB SSD</p>
+                <button onclick="selectLaptop('Lenovo ThinkPad', '15.6 FHD, Intel i7, 16GB RAM, 512GB SSD')">Select</button>
+            </div>
+
+            <div class="laptop-card">
+                <img src="images/apple-laptop.jpg" alt="Apple MacBook">
+                <h3>Apple MacBook Air</h3>
+                <p>13" Retina, Apple M1, 8GB RAM, 256GB SSD</p>
+                <button onclick="selectLaptop('Apple MacBook Air', '13 Retina, Apple M1, 8GB RAM, 256GB SSD')">Select</button>
+            </div>
+
+            <div class="laptop-card">
+                <img src="images/asus-laptop.jpg" alt="Asus Laptop">
+                <h3>Asus VivoBook</h3>
+                <p>14" FHD, Intel i3, 8GB RAM, 256GB SSD</p>
+                <button onclick="selectLaptop('Asus VivoBook', '14 FHD, Intel i3, 8GB RAM, 256GB SSD')">Select</button>
+            </div>
+
+            <div class="laptop-card">
+                <img src="images/acer-laptop.jpg" alt="Acer Laptop">
+                <h3>Acer Aspire</h3>
+                <p>15.6" FHD, AMD Ryzen 7, 8GB RAM, 1TB HDD</p>
+                <button onclick="selectLaptop('Acer Aspire', '15.6 FHD, AMD Ryzen 7, 8GB RAM, 1TB HDD')">Select</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="order">
+        <h2>Order Now</h2>
+        <form id="orderForm" onsubmit="event.preventDefault(); sendOrder();">
+            <div>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Your Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="product">Product Details:</label>
+                <textarea id="product" name="product" rows="4" required></textarea>
+            </div>
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="app.js"></script>
+    
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> MG Road, Bengaluru, Karnataka, India</p>
+        <p><strong>Phone:</strong> +91-8838533930</p>
+        <p><strong>Email:</strong> liyaninfotech01@gmail.com</p>
+        <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/xjZJvwRvH4xVkKFa9" target="_blank">Find us on Google Maps</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Liyan Infotech. All rights reserved.</p>
+        <p>Website: <a href="https://www.liyaninfotech.com">www.liyaninfotech.com</a></p>
+    </footer>
+</body>
+</html>
